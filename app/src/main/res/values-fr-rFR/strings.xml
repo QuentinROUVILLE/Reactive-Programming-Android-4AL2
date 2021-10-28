@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Mon comparateur</string>
+    <string name="hello_world">Hello world !</string>
+    <string name="product_image">Image du produit</string>
+    <string name="product_nutriscore">Nutriscore du produit</string>
+    <string name="product_barcode">Code barres : %1$s</string>
+    <string name="product_quantity">Quantité : %1$s</string>
+    <string name="product_countries">Vendu en : %1$s</string>
+    <string name="product_no_countries">Vendu en : nulle part</string>
+    <string name="product_ingredients">Ingrédients : %1$s</string>
+    <string name="product_no_ingredients">Ingrédients : aucun</string>
+    <string name="product_allergenic">Substances allergènes : %1$s</string>
+    <string name="product_no_allergenic">Substances allergènes : Aucune</string>
+    <string name="product_additives">Additifs : %1$s</string>
+    <string name="product_no_additives">Additifs : Aucun</string>
+</resources>

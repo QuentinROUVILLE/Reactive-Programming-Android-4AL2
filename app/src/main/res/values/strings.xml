@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">OpenFoodFacts</string>
+    <string name="hello_world">Hello world !</string>
+    <string name="product_image">Product image</string>
+    <string name="product_nutriscore">Product nutriscore</string>
+    <string name="product_barcode">Barcode : %1$s</string>
+    <string name="product_quantity">Quantity : %1$s</string>
+    <string name="product_countries">Sell in : %1$s</string>
+    <string name="product_no_countries">Sell in : Nowhere</string>
+    <string name="product_ingredients">Ingredients : %1$s</string>
+    <string name="product_no_ingredients">Ingredients : none</string>
+    <string name="product_allergenic">Allergenic substances : %1$s</string>
+    <string name="product_no_allergenic">Allergenic substances : None</string>
+    <string name="product_additives">Additives : %1$s</string>
+    <string name="product_no_additives">Additives : None</string>
+</resources>

@@ -13,4 +13,5 @@
     <string name="product_no_allergenic">Allergenic substances : None</string>
     <string name="product_additives">Additives : %1$s</string>
     <string name="product_no_additives">Additives : None</string>
+    <string name="nutritionnal_title">Repères nutritionnels pour 100g</string>
 </resources>

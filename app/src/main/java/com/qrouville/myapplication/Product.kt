@@ -7,6 +7,7 @@ class Product(
     val nutriscore: Char,
     val url: String,
     val quantity: String,
+    val kiloCalories: Double,
     val countries: List<String>?,
     val ingredients: List<String>?,
     val allergenic: List<String>?,

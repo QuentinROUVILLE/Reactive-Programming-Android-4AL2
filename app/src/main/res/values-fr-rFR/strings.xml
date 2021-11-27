@@ -13,4 +13,5 @@
     <string name="product_no_allergenic">Substances allergènes : Aucune</string>
     <string name="product_additives">Additifs : %1$s</string>
     <string name="product_no_additives">Additifs : Aucun</string>
+    <string name="product_calories">Product calories</string>
 </resources>

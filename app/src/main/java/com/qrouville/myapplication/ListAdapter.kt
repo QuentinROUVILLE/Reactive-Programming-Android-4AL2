@@ -19,9 +19,9 @@ class ListAdapter(private val products: List<Product>, private val listener: OnI
         cell.nutriscore.text = "Nutriscore : ${products[position].nutriscore}"
         cell.kcalories.text = "${products[position].kiloCalories} kCal/part"
 
-        /*cell.text.setOnClickListener {
+        cell.itemView.setOnClickListener {
             listener.onItemClicked(products[position])
-        }*/
+        }
     }
 
     override fun getItemCount(): Int {

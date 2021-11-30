@@ -4,34 +4,30 @@ import android.graphics.Typeface
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.style.StyleSpan
-import android.widget.ImageView
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import com.squareup.picasso.Picasso
+import androidx.fragment.app.Fragment
 
-class ProductActivity : AppCompatActivity() {
-    val product = Product(
-        name = "Petits pois et carottes",
-        brand = "Cassegrain",
-        nutriscore = 'E',
-        barcode = "3083680085304",
-        quantity = "400 g (280 g net égoutté)",
-        countries = listOf("France", "Japon", "Suisse"),
-        kiloCalories = 234.0,
-        url = "https://static.openfoodfacts.org/images/products/308/368/008/5304/front_fr.7.400.jpg",
-        ingredients = listOf("Petits pois 66%", "eau", "garniture 2,8% (salade, oignon grelot)", "sucre", "sel", "arôme naturel"),
-        allergenic = null,
-        additives = null
-    )
+class ProductActivity : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(
+            R.layout.activity_product,
+            container,
+            false
+        )
+    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_product)
-        supportActionBar?.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.toolbar_gradient))
 
-        findViewById<TextView>(R.id.product_name).text = product.name
+        //view.findViewById(R.id.product_name).setText("yolo")
+        /*findViewById<TextView>(R.id.product_name).text = product.name
         findViewById<TextView>(R.id.product_brand).text = product.brand
 
         findViewById<TextView>(R.id.product_barcode).setTextBold(
@@ -82,7 +78,7 @@ class ProductActivity : AppCompatActivity() {
             'D' -> findViewById<ImageView>(R.id.product_nutriscore).setBackgroundResource(R.drawable.nutriscore_d)
             'E' -> findViewById<ImageView>(R.id.product_nutriscore).setBackgroundResource(R.drawable.nutriscore_e)
         }
-        Picasso.get().load(product.url).into(findViewById<ImageView>(R.id.product_image))
+        Picasso.get().load(product.url).into(findViewById<ImageView>(R.id.product_image))*/
     }
 
     private fun TextView.setTextBold(text: String, separator: String = ":") {

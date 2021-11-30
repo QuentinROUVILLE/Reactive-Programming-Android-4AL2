@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.activity_product_list.*
@@ -53,14 +54,18 @@ class ProductListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Toast.makeText(activity,"Text!",Toast.LENGTH_SHORT).show()
         super.onViewCreated(view, savedInstanceState)
 
         product_list.run {
             layoutManager = GridLayoutManager(requireContext(), 1)
             adapter = ListAdapter(products, object: OnItemClickedListener {
                 override fun onItemClicked(product: Product) {
-                    Toast.makeText(activity,"Text!",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, products.toString(),Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(
+                        ProductListFragmentDirections.actionListFragmentToDetailsFragment(
+                            product = product
+                        )
+                    )
                 }
             })
             addItemDecoration(

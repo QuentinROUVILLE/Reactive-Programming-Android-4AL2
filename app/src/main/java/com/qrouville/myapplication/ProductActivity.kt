@@ -9,6 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_product.*
+
 
 class ProductActivity : Fragment() {
     override fun onCreateView(
@@ -26,59 +29,50 @@ class ProductActivity : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //view.findViewById(R.id.product_name).setText("yolo")
-        /*findViewById<TextView>(R.id.product_name).text = product.name
-        findViewById<TextView>(R.id.product_brand).text = product.brand
+        val product = ProductActivityArgs.fromBundle(requireArguments()).product
 
-        findViewById<TextView>(R.id.product_barcode).setTextBold(
-            getString(R.string.product_barcode, product.barcode))
-        findViewById<TextView>(R.id.product_quantity).setTextBold(
-            getString(R.string.product_quantity, product.quantity))
+        product_name.text = product.name
+        product_brand.text = product.brand
+
+        product_barcode.setTextBold(getString(R.string.product_barcode, product.barcode))
+        product_quantity.setTextBold(getString(R.string.product_quantity, product.quantity))
 
         if(product.countries == null || product.countries.isEmpty()){
-            findViewById<TextView>(R.id.product_countries).setTextBold(
-                getString(R.string.product_no_countries))
+            product_countries.setTextBold(getString(R.string.product_no_countries))
         }
         else{
-            findViewById<TextView>(R.id.product_countries).setTextBold(
-                getString(R.string.product_countries, product.countries))
+            product_countries.setTextBold(getString(R.string.product_countries, product.countries))
         }
 
         if(product.ingredients == null || product.ingredients.isEmpty()){
-            findViewById<TextView>(R.id.product_ingredients).setTextBold(
-                getString(R.string.product_no_ingredients))
+            product_ingredients.setTextBold(getString(R.string.product_no_ingredients))
         }
         else{
-            findViewById<TextView>(R.id.product_ingredients).setTextBold(
-                getString(R.string.product_ingredients, product.ingredients))
+            product_ingredients.setTextBold(getString(R.string.product_ingredients, product.ingredients))
         }
 
         if(product.allergenic == null || product.allergenic.isEmpty()){
-            findViewById<TextView>(R.id.product_allergenic).setTextBold(
-                getString(R.string.product_no_allergenic))
+            product_allergenic.setTextBold(getString(R.string.product_no_allergenic))
         }
         else{
-            findViewById<TextView>(R.id.product_allergenic).setTextBold(
-                getString(R.string.product_allergenic, product.allergenic))
+            product_allergenic.setTextBold(getString(R.string.product_allergenic, product.allergenic))
         }
 
         if(product.additives == null || product.additives.isEmpty()){
-            findViewById<TextView>(R.id.product_additives).setTextBold(
-                getString(R.string.product_no_additives))
+            product_additives.setTextBold(getString(R.string.product_no_additives))
         }
         else{
-            findViewById<TextView>(R.id.product_additives).setTextBold(
-                getString(R.string.product_additives, product.additives))
+            product_additives.setTextBold(getString(R.string.product_additives, product.allergenic))
         }
 
         when(product.nutriscore){
-            'A' -> findViewById<ImageView>(R.id.product_nutriscore).setBackgroundResource(R.drawable.nutriscore_a)
-            'B' -> findViewById<ImageView>(R.id.product_nutriscore).setBackgroundResource(R.drawable.nutriscore_b)
-            'C' -> findViewById<ImageView>(R.id.product_nutriscore).setBackgroundResource(R.drawable.nutriscore_c)
-            'D' -> findViewById<ImageView>(R.id.product_nutriscore).setBackgroundResource(R.drawable.nutriscore_d)
-            'E' -> findViewById<ImageView>(R.id.product_nutriscore).setBackgroundResource(R.drawable.nutriscore_e)
+            'A' -> product_nutriscore.setBackgroundResource(R.drawable.nutriscore_a)
+            'B' -> product_nutriscore.setBackgroundResource(R.drawable.nutriscore_b)
+            'C' -> product_nutriscore.setBackgroundResource(R.drawable.nutriscore_c)
+            'D' -> product_nutriscore.setBackgroundResource(R.drawable.nutriscore_d)
+            'E' -> product_nutriscore.setBackgroundResource(R.drawable.nutriscore_e)
         }
-        Picasso.get().load(product.url).into(findViewById<ImageView>(R.id.product_image))*/
+        Picasso.get().load(product.url).into(product_image)
     }
 
     private fun TextView.setTextBold(text: String, separator: String = ":") {

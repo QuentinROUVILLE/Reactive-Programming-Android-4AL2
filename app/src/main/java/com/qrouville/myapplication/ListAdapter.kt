@@ -3,6 +3,7 @@ package com.qrouville.myapplication
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class ListAdapter(private val products: List<Product>, private val listener: OnItemClickedListener) : RecyclerView.Adapter<ListItemCell>() {
 
@@ -18,6 +19,8 @@ class ListAdapter(private val products: List<Product>, private val listener: OnI
         cell.brand.text = products[position].brand
         cell.nutriscore.text = "Nutriscore : ${products[position].nutriscore}"
         cell.kcalories.text = "${products[position].kiloCalories} kCal/part"
+
+        Picasso.get().load(products[position].url).into(cell.image)
 
         cell.itemView.setOnClickListener {
             listener.onItemClicked(products[position])

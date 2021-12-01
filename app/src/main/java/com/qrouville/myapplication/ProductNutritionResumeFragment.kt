@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_product.*
 
 
-class ProductActivity : Fragment() {
+class ProductNutritionResumeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,7 +29,8 @@ class ProductActivity : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val product = ProductActivityArgs.fromBundle(requireArguments()).product
+        val detailsFragmentNutrition: ProductNutritionFragment = requireParentFragment().requireParentFragment() as ProductNutritionFragment
+        val product: Product = ProductNutritionFragmentArgs.fromBundle(detailsFragmentNutrition.requireArguments()).product
 
         product_name.text = product.name
         product_brand.text = product.brand

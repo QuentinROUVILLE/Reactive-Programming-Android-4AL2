@@ -18,4 +18,11 @@ class ProductNutritionInfosActivity : Fragment() {
             false
         )
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val detailsFragmentNutrition: ProductNutritionFragment = requireParentFragment().requireParentFragment() as ProductNutritionFragment
+        val product: Product = ProductNutritionFragmentArgs.fromBundle(detailsFragmentNutrition.requireArguments()).product
+    }
 }

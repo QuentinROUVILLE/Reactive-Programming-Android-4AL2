@@ -2,6 +2,7 @@ package com.qrouville.myapplication
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
+import kotlinx.android.parcel.RawValue
 
 @Parcelize
 class Product(
@@ -15,7 +16,8 @@ class Product(
     val countries: List<String>?,
     val ingredients: List<String>?,
     val allergenic: List<String>?,
-    val additives: List<String>?
+    val additives: List<String>?,
+    val nutritionFacts: @RawValue NutritionFacts
 ) : Parcelable
 {
 }

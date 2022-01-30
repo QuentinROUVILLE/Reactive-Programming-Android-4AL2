@@ -23,7 +23,54 @@ class ProductListFragment : Fragment() {
             ingredients = listOf("Petits pois 66%", "eau", "garniture 2,8% (salade, oignon grelot)", "sucre", "sel", "arôme naturel"),
             kiloCalories = 234.0,
             allergenic = null,
-            additives = null
+            additives = null,
+            nutritionFacts = NutritionFacts(
+                energy = NutritionFactsItem(
+                    unit = "kCal",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "293"
+                ),
+                fat = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "0,8"
+                ),
+                saturatedFattyAcid = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "0,1"
+                ),
+                carbohydrates = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "8,4"
+                ),
+                sugar = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "5,2"
+                ),
+                dietaryFibre = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "5,2"
+                ),
+                protein = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "4,2"
+                ),
+                salt = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "0,75"
+                ),
+                sodium = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "0,295"
+                )
+            )
         ),
         Product(
             name = "Nicciolata",
@@ -36,7 +83,54 @@ class ProductListFragment : Fragment() {
             ingredients = listOf("Sucre de cane", "Huile de tournesole", "Poudre de lait", "Poudre de cacao 6,5%", "cocoa butter", "Extrait de vanille"),
             kiloCalories = 544.0,
             allergenic = null,
-            additives = null
+            additives = null,
+            nutritionFacts = NutritionFacts(
+                energy = NutritionFactsItem(
+                    unit = "kCal",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "293"
+                ),
+                fat = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "0,8"
+                ),
+                saturatedFattyAcid = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "0,1"
+                ),
+                carbohydrates = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "8,4"
+                ),
+                sugar = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "5,2"
+                ),
+                dietaryFibre = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "5,2"
+                ),
+                protein = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "4,2"
+                ),
+                salt = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "0,75"
+                ),
+                sodium = NutritionFactsItem(
+                    unit = "g",
+                    quantityPerPortion = "",
+                    quantityPer100Grams = "0,295"
+                )
+            )
         )
     )
 

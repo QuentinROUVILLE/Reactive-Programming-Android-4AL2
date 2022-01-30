@@ -18,4 +18,12 @@
     <string name="fiche">Fiche</string>
     <string name="nutrition">Nutrition</string>
     <string name="tableau">Tableau</string>
+    <string name="nutrition_infos_title">Repères nutritionnels pour 100g</string>
+    <string name="nutrition_infos_value_low">en faible quantité</string>
+    <string name="nutrition_infos_value_moderate">en quantité modéré</string>
+    <string name="nutrition_infos_value_high">en quantité modéré</string>
+    <string name="nutrition_infos_fat">%1$s de Matières grasses / Lipides</string>
+    <string name="nutrition_infos_acid">%1$s d\'acide gras saturé</string>
+    <string name="nutrition_infos_sugar">%1$s de sucres</string>
+    <string name="nutrition_infos_salt">%1$s de sel</string>
 </resources>

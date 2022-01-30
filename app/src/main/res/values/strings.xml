@@ -18,4 +18,12 @@
     <string name="fiche">Fiche</string>
     <string name="nutrition">Nutrition</string>
     <string name="tableau">Tableau</string>
+    <string name="nutrition_infos_title">Nutritional guidelines per 100g</string>
+    <string name="nutrition_infos_value_low">in small quantities</string>
+    <string name="nutrition_infos_value_moderate">in moderate quantities</string>
+    <string name="nutrition_infos_value_high">in moderate quantities</string>
+    <string name="nutrition_infos_fat">%1$s of Fat / Lipids</string>
+    <string name="nutrition_infos_acid">%1$s of saturated fatty acid</string>
+    <string name="nutrition_infos_sugar">%1$s of sugars</string>
+    <string name="nutrition_infos_salt">%1$s of salt</string>
 </resources>

@@ -13,6 +13,7 @@
     <string name="product_no_allergenic">Substances allergènes : Aucune</string>
     <string name="product_additives">Additifs : %1$s</string>
     <string name="product_no_additives">Additifs : Aucun</string>
+    <string name="nutritionnal_title">Repères nutritionnels pour 100g</string>
     <string name="product_calories">Product calories</string>
     <string name="fiche">Fiche</string>
     <string name="nutrition">Nutrition</string>

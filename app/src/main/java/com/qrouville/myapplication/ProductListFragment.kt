@@ -28,47 +28,47 @@ class ProductListFragment : Fragment() {
                 energy = NutritionFactsItem(
                     unit = "kCal",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "293"
+                    quantityPer100g = "293"
                 ),
                 fat = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "0,8"
+                    quantityPer100g = "0,8"
                 ),
                 saturatedFattyAcid = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "0,1"
+                    quantityPer100g = "0,1"
                 ),
                 carbohydrates = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "8,4"
+                    quantityPer100g = "8,4"
                 ),
                 sugar = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "5,2"
+                    quantityPer100g = "5,2"
                 ),
                 dietaryFibre = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "5,2"
+                    quantityPer100g = "5,2"
                 ),
                 protein = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "4,2"
+                    quantityPer100g = "4,2"
                 ),
                 salt = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "0,75"
+                    quantityPer100g = "0,75"
                 ),
                 sodium = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "0,295"
+                    quantityPer100g = "0,295"
                 )
             )
         ),
@@ -88,47 +88,47 @@ class ProductListFragment : Fragment() {
                 energy = NutritionFactsItem(
                     unit = "kCal",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "293"
+                    quantityPer100g = "293"
                 ),
                 fat = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "0,8"
+                    quantityPer100g = "0,8"
                 ),
                 saturatedFattyAcid = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "0,1"
+                    quantityPer100g = "0,1"
                 ),
                 carbohydrates = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "8,4"
+                    quantityPer100g = "8,4"
                 ),
                 sugar = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "5,2"
+                    quantityPer100g = "5,2"
                 ),
                 dietaryFibre = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "5,2"
+                    quantityPer100g = "5,2"
                 ),
                 protein = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "4,2"
+                    quantityPer100g = "4,2"
                 ),
                 salt = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "0,75"
+                    quantityPer100g = "0,75"
                 ),
                 sodium = NutritionFactsItem(
                     unit = "g",
                     quantityPerPortion = "",
-                    quantityPer100Grams = "0,295"
+                    quantityPer100g = "0,295"
                 )
             )
         )

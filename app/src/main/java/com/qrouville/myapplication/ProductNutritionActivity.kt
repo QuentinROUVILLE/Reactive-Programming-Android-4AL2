@@ -28,33 +28,33 @@ class ProductNutritionActivity : Fragment() {
         val detailsFragmentNutrition: ProductNutritionFragment = requireParentFragment().requireParentFragment() as ProductNutritionFragment
         val product: Product = ProductNutritionFragmentArgs.fromBundle(detailsFragmentNutrition.requireArguments()).product
 
-        view.findViewById<TextView>(R.id.nutrition_fat_text).text = getString(R.string.nutrition_infos_fat, product.nutritionFacts.fat.quantityPer100Grams.plus(product.nutritionFacts.fat.unit))
-        evaluateColor(view.findViewById(R.id.nutrition_fat_sticker), view.findViewById(R.id.nutrition_fat_description), product.nutritionFacts.fat, 3.0, 20.0)
+        view.findViewById<TextView>(R.id.nutrition_fat_text).text = getString(R.string.nutrition_infos_fat, product.nutritionFacts.fat.quantityPer100g.plus(product.nutritionFacts.fat.unit))
+        setColor(view.findViewById(R.id.nutrition_fat_sticker), view.findViewById(R.id.nutrition_fat_description), product.nutritionFacts.fat, 3.0, 20.0)
 
-        view.findViewById<TextView>(R.id.nutrition_acid_text).text = getString(R.string.nutrition_infos_acid, product.nutritionFacts.saturatedFattyAcid.quantityPer100Grams.plus(product.nutritionFacts.saturatedFattyAcid.unit))
-        evaluateColor(view.findViewById(R.id.nutrition_acid_sticker), view.findViewById(R.id.nutrition_acid_description), product.nutritionFacts.saturatedFattyAcid, 1.5, 5.0)
+        view.findViewById<TextView>(R.id.nutrition_acid_text).text = getString(R.string.nutrition_infos_acid, product.nutritionFacts.saturatedFattyAcid.quantityPer100g.plus(product.nutritionFacts.saturatedFattyAcid.unit))
+        setColor(view.findViewById(R.id.nutrition_acid_sticker), view.findViewById(R.id.nutrition_acid_description), product.nutritionFacts.saturatedFattyAcid, 1.5, 5.0)
 
-        view.findViewById<TextView>(R.id.nutrition_sugar_text).text = getString(R.string.nutrition_infos_sugar, product.nutritionFacts.sugar.quantityPer100Grams.plus(product.nutritionFacts.sugar.unit))
-        evaluateColor(view.findViewById(R.id.nutrition_sugar_sticker), view.findViewById(R.id.nutrition_sugar_description), product.nutritionFacts.sugar, 5.0, 12.5)
+        view.findViewById<TextView>(R.id.nutrition_sugar_text).text = getString(R.string.nutrition_infos_sugar, product.nutritionFacts.sugar.quantityPer100g.plus(product.nutritionFacts.sugar.unit))
+        setColor(view.findViewById(R.id.nutrition_sugar_sticker), view.findViewById(R.id.nutrition_sugar_description), product.nutritionFacts.sugar, 5.0, 12.5)
 
-        view.findViewById<TextView>(R.id.nutrition_salt_text).text = getString(R.string.nutrition_infos_salt, product.nutritionFacts.salt.quantityPer100Grams.plus(product.nutritionFacts.fat.unit))
-        evaluateColor(view.findViewById(R.id.nutrition_salt_sticker), view.findViewById(R.id.nutrition_salt_description), product.nutritionFacts.salt, 0.3, 1.5)
+        view.findViewById<TextView>(R.id.nutrition_salt_text).text = getString(R.string.nutrition_infos_salt, product.nutritionFacts.salt.quantityPer100g.plus(product.nutritionFacts.fat.unit))
+        setColor(view.findViewById(R.id.nutrition_salt_sticker), view.findViewById(R.id.nutrition_salt_description), product.nutritionFacts.salt, 0.3, 1.5)
     }
 
-    private fun evaluateColor(stickerView: View, descView: TextView, nutritionFactsItem: NutritionFactsItem, lowValue: Double, moderateValue: Double) {
-        val nutritionValue = nutritionFactsItem.quantityPer100Grams.replace(',', '.').toDouble()
+    private fun setColor(view: View, description: TextView, nutritionFactsItem: NutritionFactsItem, lowLevelValu: Double, moderateLevelValu: Double) {
+        val nutritionValue = nutritionFactsItem.quantityPer100g.replace(',', '.').toDouble()
         when {
-            nutritionValue <= lowValue -> {
-                DrawableCompat.setTintList(stickerView.background, ColorStateList.valueOf(resources.getColor(R.color.nutrient_level_low)))
-                descView.text = resources.getString(R.string.nutrition_infos_value_low)
+            nutritionValue <= lowLevelValu -> {
+                DrawableCompat.setTintList(view.background, ColorStateList.valueOf(resources.getColor(R.color.nutrient_level_low)))
+                description.text = resources.getString(R.string.nutrition_infos_value_low)
             }
-            nutritionValue <= moderateValue -> {
-                DrawableCompat.setTintList(stickerView.background, ColorStateList.valueOf(resources.getColor(R.color.nutrient_level_moderate)))
-                descView.text = resources.getString(R.string.nutrition_infos_value_moderate)
+            nutritionValue <= moderateLevelValu -> {
+                DrawableCompat.setTintList(view.background, ColorStateList.valueOf(resources.getColor(R.color.nutrient_level_moderate)))
+                description.text = resources.getString(R.string.nutrition_infos_value_moderate)
             }
             else -> {
-                DrawableCompat.setTintList(stickerView.background, ColorStateList.valueOf(resources.getColor(R.color.nutrient_level_high)))
-                descView.text = resources.getString(R.string.nutrition_infos_value_high)
+                DrawableCompat.setTintList(view.background, ColorStateList.valueOf(resources.getColor(R.color.nutrient_level_high)))
+                description.text = resources.getString(R.string.nutrition_infos_value_high)
             }
         }
     }

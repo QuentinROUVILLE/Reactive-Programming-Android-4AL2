@@ -26,4 +26,16 @@
     <string name="nutrition_infos_acid">%1$s of saturated fatty acid</string>
     <string name="nutrition_infos_sugar">%1$s of sugars</string>
     <string name="nutrition_infos_salt">%1$s of salt</string>
+    <string name="nutritional_tab_title_per_100g">Per 100g</string>
+    <string name="nutritional_tab_title_part">Per part</string>
+    <string name="nutritional_tab_energy">Energy</string>
+    <string name="nutritional_tab_fat">Fats</string>
+    <string name="nutritional_tab_acid">of which Saturated fatty acids</string>
+    <string name="nutritional_tab_carbohydrate">Carbohydrates</string>
+    <string name="nutritional_tab_sugar">of which Sugars</string>
+    <string name="nutritional_tab_fibre">Dietary fibres</string>
+    <string name="nutritional_tab_protein">Protein</string>
+    <string name="nutritional_tab_salt">Salt</string>
+    <string name="nutritional_tab_sodium">Sodium</string>
+    <string name="nutritional_tab_value">%1$s</string>
 </resources>

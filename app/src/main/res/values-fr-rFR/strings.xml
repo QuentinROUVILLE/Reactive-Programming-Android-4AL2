@@ -26,4 +26,16 @@
     <string name="nutrition_infos_acid">%1$s d\'acide gras saturé</string>
     <string name="nutrition_infos_sugar">%1$s de sucres</string>
     <string name="nutrition_infos_salt">%1$s de sel</string>
+    <string name="nutritional_tab_title_per_100g">Pour 100g</string>
+    <string name="nutritional_tab_title_part">Par part</string>
+    <string name="nutritional_tab_energy">Énergie</string>
+    <string name="nutritional_tab_fat">Matières grasses</string>
+    <string name="nutritional_tab_acid">dont Acides gras saturés</string>
+    <string name="nutritional_tab_carbohydrate">Glucides</string>
+    <string name="nutritional_tab_sugar">dont Sucres</string>
+    <string name="nutritional_tab_fibre">Fibres alimentaires</string>
+    <string name="nutritional_tab_protein">Protéines</string>
+    <string name="nutritional_tab_salt">Sel</string>
+    <string name="nutritional_tab_sodium">Sodium</string>
+    <string name="nutritional_tab_value">%1$s</string>
 </resources>

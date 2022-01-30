@@ -1,20 +1,289 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/nutritional_tab_name_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="15dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/nutritional_tab_list"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5">
 
-        <TextView
+        <com.qrouville.myapplication.TableCellView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="Tableau"
-            android:textStyle="bold"/>
+            android:layout_height="wrap_content"
+            android:text="@string/nutritional_tab_energy"
+            android:padding="5dp"
+            app:border="top" />
 
+        <com.qrouville.myapplication.TableCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nutritional_tab_fat"
+            android:padding="5dp"
+            app:border="top" />
+
+        <com.qrouville.myapplication.TableCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nutritional_tab_acid"
+            android:padding="5dp"
+            app:border="top" />
+
+        <com.qrouville.myapplication.TableCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nutritional_tab_carbohydrate"
+            android:padding="5dp"
+            app:border="top" />
+
+        <com.qrouville.myapplication.TableCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nutritional_tab_sugar"
+            android:padding="5dp"
+            app:border="top" />
+
+        <com.qrouville.myapplication.TableCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nutritional_tab_fibre"
+            android:padding="5dp"
+            app:border="top" />
+
+        <com.qrouville.myapplication.TableCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nutritional_tab_protein"
+            android:padding="5dp"
+            app:border="top" />
+
+        <com.qrouville.myapplication.TableCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nutritional_tab_salt"
+            android:padding="5dp"
+            app:border="top" />
+
+        <com.qrouville.myapplication.TableCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nutritional_tab_sodium"
+            android:padding="5dp"
+            app:border="top" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/nutritional_tab_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/nutritional_tab_name_list"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5"
+        android:weightSum="2"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/nutritional_tab_list_per_100g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <com.qrouville.myapplication.TableCellView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_title_per_100g"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:border="left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_energy_per_100g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_fat_per_100g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_acid_per_100g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_carbohydrates_per_100g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_sugar_per_100g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_fibre_per_100g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_protein_per_100g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_salt_per_100g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_sodium_per_100g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nutritional_tab_list_portion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <com.qrouville.myapplication.TableCellView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_title_part"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:border="left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_energy_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_fat_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_acid_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_carbohydrates_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_sugar_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_fibre_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_protein_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_salt_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+
+            <com.qrouville.myapplication.TableCellView
+                android:id="@+id/nutritional_tab_sodium_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutritional_tab_value"
+                android:padding="5dp"
+                android:textAlignment="center"
+                app:border="top|left" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

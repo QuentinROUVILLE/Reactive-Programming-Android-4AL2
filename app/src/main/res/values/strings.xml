@@ -38,4 +38,7 @@
     <string name="nutritional_tab_salt">Salt</string>
     <string name="nutritional_tab_sodium">Sodium</string>
     <string name="nutritional_tab_value">%1$s</string>
+    <string name="scan_bar_code">Scan a barcode</string>
+    <string name="no_product_title">You have not scanned anything yet !</string>
+    <string name="no_product_subtitle">Click on the button below to begin.</string>
 </resources>

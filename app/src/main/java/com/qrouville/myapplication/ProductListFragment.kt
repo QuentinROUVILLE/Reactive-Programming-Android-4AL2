@@ -1,9 +1,11 @@
 package com.qrouville.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -11,8 +13,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.activity_product_list.*
 
 class ProductListFragment : Fragment() {
-    private val products = listOf(
-        Product(
+    private val products: MutableList<Product> = arrayListOf()
+        /*listOf(Product(
             name = "Petits pois et carottes",
             brand = "Cassegrain",
             nutriscore = 'E',
@@ -132,38 +134,60 @@ class ProductListFragment : Fragment() {
                 )
             )
         )
-    )
+    )*/
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(
-            R.layout.activity_product_list,
-            container,
-            false
-        )
+        return if (products.size == 0) {
+            inflater.inflate(R.layout.empty_product_list, container, false)
+        } else {
+            inflater.inflate(R.layout.activity_product_list, container, false)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        product_list.run {
-            layoutManager = GridLayoutManager(requireContext(), 1)
-            adapter = ListAdapter(products, object: OnItemClickedListener {
-                override fun onItemClicked(product: Product) {
-                    findNavController().navigate(
-                        ProductListFragmentDirections.actionListFragmentToDetailsFragment(
-                            product = product
+        if (products.size != 0) {
+            products_list.run {
+                layoutManager = GridLayoutManager(requireContext(), 1)
+                adapter = ListAdapter(products, object : OnItemClickedListener {
+                    override fun onItemClicked(product: Product) {
+                        findNavController().navigate(
+                            ProductListFragmentDirections.actionListFragmentToDetailsFragment(
+                                product = product
+                            )
                         )
+                    }
+                })
+                addItemDecoration(
+                    DividerItemDecoration(
+                        requireContext(),
+                        DividerItemDecoration.VERTICAL
                     )
-                }
-            })
-            addItemDecoration(
-                DividerItemDecoration(
-                    requireContext(),
-                    DividerItemDecoration.VERTICAL
+                )
+            }
+        }
+
+        view.findViewById<Button>(R.id.products_start_scan).setOnClickListener {
+            val intent = Intent("com.google.zxing.client.android.SCAN")
+            intent.putExtra("SCAN_FORMATS", "EAN_13")
+            startActivityForResult(intent, 100)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
+    {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 100 && data != null) {
+            val scannedProduct: Product = Product.createProductFromBarcode(data.getStringExtra("SCAN_RESULT").toString())
+            products.add(scannedProduct)
+            findNavController().navigate(
+                ProductListFragmentDirections.actionListFragmentToDetailsFragment(
+                    scannedProduct
                 )
             )
         }
